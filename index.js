@@ -32,8 +32,20 @@ masterPlay.addEventListener('click',()=>{
         gif.style.opacity=0;
     }
 })
-
+let progress=0;
 //Listen to events
-document.addEventListener('timeUpdate',()=>{
+audioElement.addEventListener('timeupdate',()=>{
     console.log("timeUpdate");
+    //console.log(audioElement.currentTime);
+    //console.log(audioElement.duration);
+    progress=parseInt((audioElement.currentTime/audioElement.duration)*100);
+    //console.log(progress);
+    myProgressBar.value=progress;
+})
+
+myProgressBar.addEventListener('change',()=>{
+    audioElement.currentTime=myProgressBar.value*audioElement.duration/100;
+    
+    //console.log(progress);
+ 
 })
