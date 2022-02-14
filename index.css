@@ -27,7 +27,14 @@ nav ul{
 }
 
 nav ul li{
-    margin: 1%;
+    margin: 1%;padding: 0 5%;
+    color: white;
+    background-color: black;
+}
+
+nav ul li :hover{
+    color: green;
+    transition-duration: 0.1s;
 }
 
 nav ul li:last-child{
@@ -135,4 +142,9 @@ nav ul li:last-child{
 
 .fa{
     cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
